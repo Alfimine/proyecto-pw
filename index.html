@@ -1,55 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Página Web</title>
+    <title>Sekiro:Shadows Die Twice</title>
+    <meta name="description" content="Bienvenido a mi sitio web sobre Sekiro: Shadows Die Twice">
+    <meta name="keywords" content="Sekiro, videojuego, samuráis, acción">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="images/icono.ico">
 </head>
 <body>
-    <header>
-        <div><img src="images/portada.jpg" alt=""></div>
-        <h1>Sekiro: Shadows Die Twice</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#desc">Descripción</a></li>
-                <li><a href="pages/historia.html">Historia</a></li>
-                <li><a href="#pj">Personajes</a></li>
-                <li><a href="pages/mecan.html">Mecánicas</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <article>
-                <p>En esta página vas a encontrar toda la información del videojuego Sekiro: Shadows Die Twice.</p>
-            </article>
-        </section>
-        <section id="desc">
-            <h2>Descripción</h2>
-            <article>
-                <p>
-                    Sekiro: Shadows Die Twice es un juego de acción rpg japonés que se basa en una historia ficticia 
-                    con temática japonesa. El protagonista de la historia es un shinobi llamado Lobo que tendrá que salvar
-                    a su señor de la familia Ashina, familia que consiguió el poder tras un levantamiento armado.
-                    Las batallas en este juego se resumen en el protagonista con unicamente una katana, aunque tiene algunos
-                    añadidos como una protesis shinobi, contra enemigos gigantes o grandes guerreros.
-                </p>
-            </article>
-        </section>
-        <section id="pj">
-            <h2>Personajes</h2>
-            <div><a href="pages/sekiro.html"><img src="images/sekiro.jpg" alt=""></a><br><p>Lobo/Sekiro</p></div>
-            <div><a href="pages/kuro.html"><img src="images/sekiro.jpg" alt=""></a><br><p>Lord Kuro</p></div>
-            <div><a href="pages/emma.html"><img src="images/sekiro.jpg" alt=""></a><br><p>Lady Emma</p></div>
-            <div><a href="pages/isshin.html"><img src="images/sekiro.jpg" alt=""></a><br><p>Isshin Ashina</p></div>
-            <div><a href="pages/geni.html"><img src="images/sekiro.jpg" alt=""></a><br><p>Genichiro Ashina</p></div>
-        </section>
-        <aside>
+    <div id="menu">
+        <img src="images/portada.webp" alt="Imagen de Bienvenida">
+        <p>Bienvenido/a a la página de Sekiro: Shadows Die Twice</p>
+        <div class="botones">
+            <button class="boton" onclick="mostrarContenido()">Continuar</button>
+            <button class="boton" onclick="salir()">Salir</button>
+        </div>
+    </div>
 
-        </aside>
-    </main>
+    <div id="contenido" class="escondido">
+        <header>
+            <h1>Sekiro: Shadows Die Twice</h1>
+            <nav>
+                <ul>
+                    <li><a href="pages/historia.html">Historia</a></li>
+                    <li><a href="pages/mec.html">Mecánicas</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="desc">
+                <h2>Descripción</h2>
+                    <p>
+                        En Sekiro: Shadows Die Twice, eres el “lobo de un solo brazo”, un guerrero deshonrado y desfigurado rescatado al borde de la muerte. 
+                        Tu deber es proteger a un joven señor descendiente de una antigua estirpe, pero te conviertes en el objetivo de muchos enemigos viciosos, 
+                        incluido el peligroso clan Ashina. Explora el Japón del siglo XVI, enfrentándote a enemigos colosales en un mundo oscuro y retorcido. 
+                        Desata un arsenal de herramientas protésicas mortales y habilidades ninja mientras combinas sigilo, exploración vertical y combate visceral en una
+                        confrontación sangrienta.
+                    </p>
+            </section>
+            <section id="pj">
+                <h2>Personajes</h2>
+                <div><a href="pages/sekiro.html"><img src="images/sekiro.webp" alt="Lobo"></a><br><p>Lobo/Sekiro</p></div>
+                <div><a href="pages/kuro.html"><img src="images/Jeune_seigneur.webp" alt="Kuro"></a><br><p>Lord Kuro</p></div>
+                <div><a href="pages/emma.html"><img src="images/Emma(2).webp" alt="Emma"></a><br><p>Lady Emma</p></div>
+                <div><a href="pages/isshin.html"><img src="images/Isshin.webp" alt="Isshin"></a><br><p>Isshin Ashina</p></div>
+                <div><a href="pages/geni.html"><img src="images/Genichiro.webp" alt="Genichiro"></a><br><p>Genichiro Ashina</p></div>
+                <div><a href="pages/escultor.html"><img src="images/Escultor(1).webp" alt="Escultor"></a><br><p>El Escultor</p></div>
+            </section>
+            <footer>
+                <p>Hecho por Alfonso Manzaneque</p>
+                <div>
+                    <p><a href="pages/registro.html">Registrarse</a></p>
+                    <p><a href="pages/iniciosesion.html">Inicio de sesión</a></p>
+                </div>
+            </footer>
+
+            <script>
+                function mostrarContenido() {
+                    document.getElementById("menu").style.display = "none";
+                    document.getElementById("contenido").classList.remove("escondido");
+                }
+        
+                function salir() {
+                    alert("Hasta la próxima");
+                    window.location.href = "https://www.google.com";
+                }
+            </script>
+        </main>
+    </div>
 </body>
 </html>
